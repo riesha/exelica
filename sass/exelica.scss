@@ -1,0 +1,94 @@
+$ex-bg:#101119;
+$ex-comment:#5D5C75;
+$ex-accent:#AA84EB;
+$ex-text: #D5E1EC;
+$ex-link: #FF70FF;
+$ex-ext-link:#87EFFF;
+$ex-ascii: #d4d1cb; 
+$ex-warn:#FF4EA4;
+$ex-title: #FFA4F4;
+@font-face {
+    font-family: "gohu";
+    src: url("gohu.woff") format('woff');
+}
+
+@font-face {
+    font-family: "tewi";
+    src: url("tewi.ttf") format('truetype');
+}
+@mixin comment() {
+    color: $ex-comment;
+    font-family: "tewi";
+    font-size: 11px;
+  }
+* {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+  
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: "gohu", "Lucida Console", monospace, Monaco;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+body {
+    color: $ex-text;
+    background-color: $ex-bg;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+a {
+    color: $ex-link;
+    text-decoration: none;
+}
+h1 {
+    color: $ex-accent;
+}
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 38rem;
+    padding-left:  1rem;
+    padding-right: 1rem;
+    margin-left:  auto;
+    margin-right: auto;
+}
+.post {
+    margin-bottom: 3em;
+    margin-top: -2rem;
+}
+.post::after {
+    content: "───────────────────────────────────────────────────────────//──";
+}
+.post-title {
+    color: $ex-title;
+    margin-bottom: 1rem;
+}
+.post-date {
+    @include comment;
+    display: block;
+    margin-top: -0.8rem;
+    margin-bottom: 1rem;
+}
+.post-summary {
+    
+    @include comment;
+    color: $ex-ascii;
+    margin-top: -1rem;
+}
+code {
+    font-family: "gohu";
+    font-size: 14px;
+}

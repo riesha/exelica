@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+        <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="{{ get_url(path="exelica.css", trailing_slash=false) }}">
+      
+      {% block extra_head %}
+      {% endblock extra_head %}
+    </head>
+
+    <body>
+       <div class="container">
+        <a href="{{ config.base_url }}"><h1 style="margin-bottom: 4rem;">{{ config.title }}</h1></a>
+
+        {% block content %}
+                <div class="posts">
+                    {% for page in section.pages | reverse %}
+                      <div class="post">
+                        <h1 class="post-title">
+                          <a href="{{ page.permalink }}">
+                            {{ page.title }}&nbsp;&raquo;
+                          </a>
+                        </h1>
+                        <div class="post-summary">{{ page.summary | safe }}</div>
+                        
+                        <span class="post-date">{{ page.date | date(format="%Y ~ %m ~ %d") }}</span>
+                      </div>
+                    {% endfor %}
+                </div>
+        {% endblock content %}
+       </div>
+    </body>
+
+</html>
