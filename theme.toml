@@ -1,5 +1,5 @@
 name = "exelica"
-description = "A classic blog theme"
+description = "A cute minimal theme"
 license = "MIT"
 homepage = ""
 # The minimum version of Zola required
@@ -12,8 +12,9 @@ demo = ""
 # be merged with user data, some kind of prefix or nesting is preferable
 # Use snake_casing to be consistent with the rest of Zola
 [extra]
-exelica_links = [
-
+ex_menu = [
+    {url = "$BASE_URL/tags", name = "tags"},
+    {url = "$BASE_URL/about", name = "about"},
 ]
 # The theme author info: you!
 [author]
