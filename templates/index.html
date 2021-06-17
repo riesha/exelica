@@ -16,7 +16,20 @@
     </head>
 
     <body>
-       <div class="container">
+      <header>
+        <nav class="menu">
+            <ul>
+                {% for item in config.extra.ex_menu %}
+                    <li>
+                        <a href="{{ item.url | replace(from="$BASE_URL", to=config.base_url) }}">
+                            {{ item.name }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </header>
+       <div class="container">  
         <a href="{{ config.base_url }}"><h1 style="margin-bottom: 4rem;">{{ config.title }}</h1></a>
 
         {% block content %}

@@ -16,3 +16,7 @@ highlight_theme = "1337"
 
 [extra]
 # Put all your custom variables here
+ex_menu = [
+    {url = "$BASE_URL/tags", name = "tags"},
+    {url = "$BASE_URL/about", name = "about"},
+]
