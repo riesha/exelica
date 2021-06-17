@@ -1,3 +1,6 @@
+
+
+
 $ex-bg:#101119;
 $ex-comment:#5D5C75;
 $ex-accent:#AA84EB;
@@ -7,6 +10,7 @@ $ex-ext-link:#87EFFF;
 $ex-ascii: #d4d1cb; 
 $ex-warn:#FF4EA4;
 $ex-title: #FFA4F4;
+
 @font-face {
     font-family: "gohu";
     src: url("gohu.woff") format('woff');
@@ -16,11 +20,15 @@ $ex-title: #FFA4F4;
     font-family: "tewi";
     src: url("tewi.ttf") format('truetype');
 }
+
+
 @mixin comment() {
     color: $ex-comment;
     font-family: "tewi";
     font-size: 11px;
-  }
+}
+
+  
 * {
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
@@ -51,11 +59,12 @@ a {
     text-decoration: none;
 }
 h1 {
+    
     color: $ex-accent;
 }
 a:hover,
 a:focus {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .container {
@@ -73,8 +82,10 @@ a:focus {
     content: "───────────────────────────────────────────────────────────//──";
 }
 .post-title {
+   
     color: $ex-title;
     margin-bottom: 1rem;
+
 }
 .post-date {
     @include comment;
@@ -83,12 +94,13 @@ a:focus {
     margin-bottom: 1rem;
 }
 .post-summary {
-    
     @include comment;
     color: $ex-ascii;
     margin-top: -1rem;
 }
+
 code {
     font-family: "gohu";
     font-size: 14px;
+    
 }
