@@ -1,6 +1,3 @@
-
-
-
 $ex-bg:#101119;
 $ex-comment:#5D5C75;
 $ex-accent:#AA84EB;
@@ -28,7 +25,10 @@ $ex-title: #FFA4F4;
     font-size: 11px;
 }
 
-  
+@mixin glow($color) {
+    text-shadow: 0px 0px 10px $color;
+}
+
 * {
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
@@ -87,6 +87,7 @@ a:focus {
    
     color: $ex-title;
     margin-bottom: 1rem;
+    @include glow($ex-title)
 
 }
 .post-date {
