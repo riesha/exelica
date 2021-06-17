@@ -39,6 +39,7 @@ html,
 body {
     margin: 0;
     padding: 0;
+    position: relative;
 }
 
 html {
@@ -75,10 +76,11 @@ a:focus {
     margin-right: auto;
 }
 .post {
-    margin-bottom: 3em;
+    margin-bottom: 2em;
     margin-top: -2rem;
 }
 .post::after {
+    
     content: "───────────────────────────────────────────────────────────//──";
 }
 .post-title {
@@ -90,8 +92,8 @@ a:focus {
 .post-date {
     @include comment;
     display: block;
-    margin-top: -0.8rem;
-    margin-bottom: 1rem;
+    margin-top: -0.5rem;
+    margin-bottom: 0.5rem;
 }
 .post-summary {
     @include comment;
@@ -102,5 +104,22 @@ a:focus {
 code {
     font-family: "gohu";
     font-size: 14px;
+}
+.menu {
+    position: fixed;
+    top: 0;
     
+    p {
+        @include comment;
+        margin-top: 0px;
+    } 
+    li {
+        list-style: none;
+        a {
+            color: $ex-accent;
+        }
+    }
+    li::before {
+        content: "~";
+    }
 }
