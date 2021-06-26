@@ -1,5 +1,5 @@
 +++
-title = "anoter sample blog post"
+title = "another sample blog post"
 date = 2021-06-10
 +++
 
