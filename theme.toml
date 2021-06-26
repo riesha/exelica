@@ -13,8 +13,7 @@ demo = ""
 # Use snake_casing to be consistent with the rest of Zola
 [extra]
 ex_menu = [
-    {url = "$BASE_URL/tags", name = "tags"},
-    {url = "$BASE_URL/about", name = "about"},
+    
 ]
 # The theme author info: you!
 [author]

@@ -1,6 +1,6 @@
 # The URL the site will be built for
-title = "triggerhe.art"
-base_url = "https://triggerhe.art"
+title = "exelica"
+base_url = ""
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
@@ -22,6 +22,5 @@ highlight_theme = "1337"
 [extra]
 # Put all your custom variables here
 ex_menu = [
-    {url = "$BASE_URL/tags", name = "tags"},
-    {url = "$BASE_URL/about", name = "about"},
+    
 ]
